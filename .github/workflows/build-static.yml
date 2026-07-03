@@ -35,9 +35,7 @@ jobs:
               libjpeg-turbo-dev \
               libjpeg-turbo-static \
               libwebp-dev \
-              libwebp-static \
-              tiff-dev \
-              tiff-static && \
+              libwebp-static && \
             ./autogen.sh && \
             ./configure \
               --enable-static \
@@ -46,6 +44,7 @@ jobs:
               --without-heif \
               --without-jxl \
               --without-svg \
+              --without-tiff \
               LDFLAGS='-static' && \
             make -j\$(nproc) && \
             strip tools/chafa/chafa
