@@ -38,6 +38,7 @@ jobs:
               libwebp-static && \
             ./autogen.sh && \
             ./configure \
+              PKG_CONFIG='pkg-config --static' \
               --enable-static \
               --disable-shared \
               --without-avif \
@@ -45,7 +46,7 @@ jobs:
               --without-jxl \
               --without-svg \
               --without-tiff \
-              LDFLAGS='-static' && \
+              LDFLAGS='-all-static' && \
             make -j\$(nproc) && \
             strip tools/chafa/chafa
           "
