@@ -35,7 +35,13 @@ jobs:
               libjpeg-turbo-dev \
               libjpeg-turbo-static \
               libwebp-dev \
-              libwebp-static && \
+              libwebp-static \
+              pcre2-dev \
+              pcre2-static \
+              bzip2-dev \
+              bzip2-static \
+              brotli-dev \
+              brotli-static && \
             ./autogen.sh && \
             ./configure \
               PKG_CONFIG='pkg-config --static' \
