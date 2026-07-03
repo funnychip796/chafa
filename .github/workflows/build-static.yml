@@ -45,9 +45,8 @@ jobs:
               --without-heif \
               --without-jxl \
               --without-svg \
-              --without-tiff \
-              LDFLAGS='-all-static' && \
-            make -j\$(nproc) && \
+              --without-tiff && \
+            make -j\$(nproc) LDFLAGS='-all-static' && \
             strip tools/chafa/chafa
           "
 
