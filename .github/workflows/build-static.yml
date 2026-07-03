@@ -36,8 +36,8 @@ jobs:
               libjpeg-turbo-static \
               libwebp-dev \
               libwebp-static \
-              libtiff-dev \
-              libtiff-static && \
+              tiff-dev \
+              tiff-static && \
             ./autogen.sh && \
             ./configure \
               --enable-static \
